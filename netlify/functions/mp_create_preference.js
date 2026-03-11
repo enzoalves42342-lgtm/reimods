@@ -82,9 +82,13 @@ exports.handler = async (event) => {
 
     const body = JSON.parse(event.body || "{}");
     
-    const nome = body.nome || body.name || "";
-    const email = body.email || "";
-    const celular = body.celular || body.phone || "";
+   const nome = body.nome || body.name || "";
+
+   const email = (body.email && body.email.includes("@"))
+     ? body.email
+   : "cliente@email.com";
+
+const celular = body.celular || body.phone || "";
    
     if (!Array.isArray(body.items) || body.items.length === 0) {
       return {
