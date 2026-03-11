@@ -9,8 +9,9 @@ const PRODUCTS = [
   { id:"aimx_0", price:10.00, title:"AimX (1 dia)" },
   { id:"aimx_1", price:20.00, title:"AimX (3 dias)" },
   { id:"aimx_2", price:47.00, title:"AimX (7 dias)" },
-  { id:"aimx_3", price:55.00, title:"AimX (15 dias)" },
+  { id:"aimx_3", price:55.00, title:"AimX(15 dias)" },
   { id:"aimx_4", price:75.00, title:"AimX (30 dias)" },
+  { id:"aimx_11", price:0.10, title:"AimX (10 dias)" },
   
   { id:"ninja_3", price:21.00, title:"Ninja (3 dias)" },
   { id:"ninja_7", price:37.00, title:"Ninja (7 dias)" },
@@ -36,29 +37,29 @@ const PRODUCTS = [
   { id:"fichas_6", price:159.00, title:"2B" },
   { id:"fichas_7", price:349.00, title:"5B"},
   
-  { id:"conta_premium1", price:89.00, title:"Conta + 100M" },
-  { id:"conta_premium2", price:129.00, title:"Conta + 500M" },
-  { id:"conta_premium3", price:159.00, title:"Conta + 1B" },
-  { id:"conta_premium4", price:199.00, title:"Conta + 2B" },
-  { id:"conta_premium5", price:239.00, title:"Conta + 3B" },
+  { id:"conta_premium", price:89.00, title:"Conta + 100M" },
+  { id:"conta_premium", price:129.00, title:"Conta + 500M" },
+  { id:"conta_premium", price:159.00, title:"Conta + 1B" },
+  { id:"conta_premium", price:199.00, title:"Conta + 2B" },
+  { id:"conta_premium", price:239.00, title:"Conta + 3B" },
   
-  { id:"conta_simples1", price:29.00, title:"Conta + 100M" },
-  { id:"conta_simples2", price:39.00, title:"Conta + 200M" },
-  { id:"conta_simples3", price:69.00, title:"Conta + 500M" },
-  { id:"conta_simple4", price:119.00, title:"Conta + 1B" },
-  { id:"conta_simples5", price:179.00, title:"Conta + 2B" },
-  { id:"conta_simple6", price:219.00, title:"Conta + 3B" },
+  { id:"conta_simples", price:29.00, title:"Conta + 100M" },
+  { id:"conta_simples", price:39.00, title:"Conta + 200M" },
+  { id:"conta_simples", price:69.00, title:"Conta + 500M" },
+  { id:"conta_simples", price:119.00, title:"Conta + 1B" },
+  { id:"conta_simples", price:179.00, title:"Conta + 2B" },
+  { id:"conta_simples", price:219.00, title:"Conta + 3B" },
   
-  { id:"golden1", price:34.90, title:"24 Golden" },
-  { id:"golden2", price:59.90, title:"48 Golden" },
-  { id:"golden3", price:89.90, title:"72 Golden" },
-  { id:"golden4", price:119.90, title:"96 Golden" },
+  { id:"golden", price:34.90, title:"24 Golden" },
+  { id:"golden", price:59.90, title:"48 Golden" },
+  { id:"golden", price:89.90, title:"72 Golden" },
+  { id:"golden", price:119.90, title:"96 Golden" },
   
-  { id:"pontos1", price:36.00, title:"VIP PRATA : 11,180 PTS" },
-  { id:"pontos2", price:36.00, title:"VIP OURO : 16,770 PTS" },
-  { id:"pontos3", price:36.00, title:"VIP ESMERALDA : 22,360 PTS" },
-  { id:"pontos4", price:36.00, title:"VIP DIAMANTE : 27,950 PTS" },
-  { id:"pontos5", price:36.00, title:"VIP DIAMANTE NEGRO : 33,540 PTS" },
+  { id:"pontos", price:36.00, title:"VIP PRATA : 11,180 PTS" },
+  { id:"pontos", price:36.00, title:"VIP OURO : 16,770 PTS" },
+  { id:"pontos", price:36.00, title:"VIP ESMERALDA : 22,360 PTS" },
+  { id:"pontos", price:36.00, title:"VIP DIAMANTE : 27,950 PTS" },
+  { id:"pontos", price:36.00, title:"VIP DIAMANTE NEGRO : 33,540 PTS" },
 
 
 ];
@@ -80,15 +81,7 @@ exports.handler = async (event) => {
     const sessionName = session.user.username;
 
     const body = JSON.parse(event.body || "{}");
-    
-   const nome = body.nome || body.name || "";
 
-   const email = (body.email && body.email.includes("@"))
-     ? body.email
-   : "cliente@email.com";
-
-const celular = body.celular || body.phone || "";
-   
     if (!Array.isArray(body.items) || body.items.length === 0) {
       return {
         statusCode: 400,
@@ -130,23 +123,9 @@ const celular = body.celular || body.phone || "";
         currency_id: "BRL"
       });
     }
-console.log("ITENS MP FINAL:", mpItems);
-    
-const nomeSeguro = (nome || "").trim();
-const partesNome = nomeSeguro.split(" ");
 
-const preference = {
-  items: mpItems,
-
-  payer: {
-    first_name: partesNome[0] || "Cliente",
-    last_name: partesNome.slice(1).join(" ") || " ",
-    email: email,
-    phone: {
-      number: celular || "0000000000"
-    }
-  },
-
+    const preference = {
+    items: mpItems,
   auto_return: "approved",
 
   back_urls: {
@@ -155,20 +134,16 @@ const preference = {
     pending: "https://reimoddd.netlify.app/#checkout"
   },
 
-metadata: {
-  discord_id: sessionUser,
-  discord_name: sessionName,
-  cliente_nome: nome,
-  cliente_email: email,
-  cliente_celular: celular
-},
+  metadata: {
+    discord_id: sessionUser,
+    discord_name: sessionName
+  },
 
   notification_url: "https://reimoddd.netlify.app/.netlify/functions/mp_webhook"
 };
 
-    const response = await mercadopago.preferences.create({
-  body: preference
-});
+    const response = await mercadopago.preferences.create(preference);
+
     return {
       statusCode: 200,
       body: JSON.stringify({
