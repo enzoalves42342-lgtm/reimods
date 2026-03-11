@@ -356,10 +356,12 @@ async function payNow(){
   if (cartCount() === 0) 
     return toast("Carrinho vazio. Adicione itens na Loja.");
 
-  const items = [];
-  for (const [id, qty] of cart.entries()){
-    items.push({ id, quantity: qty });
-  }
+const items = [];
+for (const [id, qty] of cart.entries()){
+  items.push({ id, quantity: qty });
+}
+
+console.log("CARRINHO ENVIADO:", items);
 
   try{
     const res = await fetch("/.netlify/functions/mp_create_preference", {
