@@ -130,13 +130,11 @@ exports.handler = async (event) => {
 
     const preference = {
     items: mpItems,
-      payer: {
+payer: {
   name: nome,
-  email: email,
-  phone: {
-    number: celular
-  }
+  email: email
 },
+      
   auto_return: "approved",
 
   back_urls: {
