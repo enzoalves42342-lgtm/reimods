@@ -132,7 +132,9 @@ const celular = body.celular || body.phone || "";
       });
     }
 
-    const preference = {
+    cconst preference = {
+  items: mpItems,
+
   payer: {
     first_name: nome.split(" ")[0],
     last_name: nome.split(" ").slice(1).join(" "),
