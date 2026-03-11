@@ -365,9 +365,13 @@ async function payNow(){
     const res = await fetch("/.netlify/functions/mp_create_preference", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  credentials: "include",
-  body: JSON.stringify({ items })
-});
+  body: JSON.stringify({
+    nome: document.querySelector('input[placeholder="Seu nome"]').value,
+    email: document.querySelector('input[placeholder="seuemail@dominio.com"]').value,
+    celular: document.querySelector('input[placeholder="(DDD) 99999-9999"]').value,
+    items: items
+  })
+})
 
 
     const data = await res.json();
