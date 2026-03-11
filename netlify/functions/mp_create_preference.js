@@ -9,7 +9,7 @@ const PRODUCTS = [
   { id:"aimx_0", price:10.00, title:"AimX (1 dia)" },
   { id:"aimx_1", price:20.00, title:"AimX (3 dias)" },
   { id:"aimx_2", price:47.00, title:"AimX (7 dias)" },
-  { id:"aimx_3", price:55.00, title:"AimX(15 dias)" },
+  { id:"aimx_3", price:55.00, title:"AimX (15 dias)" },
   { id:"aimx_4", price:75.00, title:"AimX (30 dias)" },
   
   { id:"ninja_3", price:21.00, title:"Ninja (3 dias)" },
