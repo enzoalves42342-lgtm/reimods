@@ -368,11 +368,12 @@ console.log("CARRINHO ENVIADO:", items);
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify({
-  nome: document.getElementById("checkoutNome").value,
-  email: document.getElementById("checkoutEmail").value,
-  celular: document.getElementById("checkoutCelular").value,
-  items: items
-})
+    nome: document.getElementById("buyerName").value,
+    email: document.getElementById("buyerEmail").value,
+    celular: document.getElementById("buyerPhone").value,
+    items: items
+  })
+});
 
     const data = await res.json();
     if (!res.ok) 
