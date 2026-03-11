@@ -26,7 +26,6 @@ exports.handler = async (event) => {
 
     const data = paymentResponse.body;
     console.log("STATUS REAL DO PAGAMENTO:", data.status);
-
     if (data.status !== "approved") {
       console.log("Pagamento não aprovado:", data.status);
       return { statusCode: 200 };
@@ -34,55 +33,31 @@ exports.handler = async (event) => {
 
     const discordId = data.metadata?.discord_id || "Não identificado";
     const discordName = data.metadata?.discord_name || "Desconhecido";
-
     const total = data.transaction_amount || 0;
-
-    const date = data.date_approved
-      ? new Date(data.date_approved).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })
-      : "Data desconhecida";
+   const date = data.date_approved
+  ? new Date(data.date_approved).toLocaleString("pt-BR", { timeZone: "America/Sao_Paulo" })
+  : "Data desconhecida";
 
     const productNames = data.additional_info?.items
       ?.map(i => `${i.title} (x${i.quantity})`)
       .join("\n") || "Não identificado";
 
-    // DADOS DO COMPRADOR
-const cliente =
- `${data.payer?.first_name || ""} ${data.payer?.last_name || ""}`.trim() ||
- data.metadata?.cliente_nome ||
- "Não informado";
-
-const email =
- data.payer?.email ||
- data.metadata?.cliente_email ||
- "Não informado";
-
-const celular =
- data.payer?.phone?.number ||
- data.metadata?.cliente_celular ||
- "Não informado";
-
-    const response = await fetch(process.env.DISCORD_WEBHOOK_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        embeds: [{
-          title: "💰 Compra Aprovada",
-          color: 3066993,
-          fields: [
-            { name: "👤 Usuário Discord", value: `${discordName} (${discordId})` },
-            { name: "📦 Produto", value: productNames },
-            { name: "📅 Data", value: date },
-            { name: "💵 Valor", value: `R$ ${total}` },
-
-            { name: "👤 Cliente", value: cliente },
-            { name: "📧 Email", value: email },
-            { name: "📱 Celular", value: celular },
-
-            { name: "💰 Total da compra", value: `R$ ${total}` }
-          ]
-        }]
-      })
-    });
+const response = await fetch(process.env.DISCORD_WEBHOOK_URL, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    embeds: [{
+      title: "💰 Compra Aprovada",
+      color: 3066993,
+      fields: [
+        { name: "👤 Usuário", value: `${discordName} (${discordId})` },
+        { name: "📦 Produto", value: `${product?.name || "Produto"}` },
+        { name: "📅 Data", value: `${new Date().toLocaleString("pt-BR")}` },
+		{ name: "💰 Valor", value: `R$ ${product?.price || payment.transaction_amount}` },
+      ]
+    }]
+  })
+});
 
     console.log("Discord status:", response.status);
 
