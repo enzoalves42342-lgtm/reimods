@@ -133,13 +133,14 @@ const celular = body.celular || body.phone || "";
     }
 
     const preference = {
-payer: {
-  name: nome,
-  email: email,
-  phone: {
-    number: celular
-  }
-}
+  payer: {
+    first_name: nome.split(" ")[0],
+    last_name: nome.split(" ").slice(1).join(" "),
+    email: email,
+    phone: {
+      number: celular
+    }
+  },
       
   auto_return: "approved",
 
