@@ -133,11 +133,13 @@ const celular = body.celular || body.phone || "";
     }
 
     const preference = {
-    items: mpItems,
 payer: {
   name: nome,
-  email: email
-},
+  email: email,
+  phone: {
+    number: celular
+  }
+}
       
   auto_return: "approved",
 
