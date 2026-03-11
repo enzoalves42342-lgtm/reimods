@@ -131,18 +131,21 @@ const celular = body.celular || body.phone || "";
       });
     }
 
-    const preference = {
+const nomeSeguro = (nome || "").trim();
+const partesNome = nomeSeguro.split(" ");
+
+const preference = {
   items: mpItems,
 
   payer: {
-    first_name: nome.split(" ")[0],
-    last_name: nome.split(" ").slice(1).join(" "),
+    first_name: partesNome[0] || "Cliente",
+    last_name: partesNome.slice(1).join(" ") || " ",
     email: email,
     phone: {
-      number: celular
+      number: celular || "0000000000"
     }
   },
-      
+
   auto_return: "approved",
 
   back_urls: {
@@ -162,8 +165,9 @@ metadata: {
   notification_url: "https://reimoddd.netlify.app/.netlify/functions/mp_webhook"
 };
 
-    const response = await mercadopago.preferences.create(preference);
-
+    const response = await mercadopago.preferences.create({
+  body: preference
+});
     return {
       statusCode: 200,
       body: JSON.stringify({
