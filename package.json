@@ -1,7 +1,7 @@
 {
-  "name": "malibu-roleplay",
+  "name": "REI MODS",
   "version": "1.0.0",
-  "description": "Malibu RP Store",
+  "description": "REI MODS Store",
   "main": "index.js",
   "dependencies": {
     "mercadopago": "^1.5.15"
