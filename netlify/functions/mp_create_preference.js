@@ -130,7 +130,8 @@ const celular = body.celular || body.phone || "";
         currency_id: "BRL"
       });
     }
-
+console.log("ITENS MP FINAL:", mpItems);
+    
 const nomeSeguro = (nome || "").trim();
 const partesNome = nomeSeguro.split(" ");
 
