@@ -46,9 +46,20 @@ exports.handler = async (event) => {
       .join("\n") || "Não identificado";
 
     // DADOS DO COMPRADOR
-    const cliente = `${data.payer?.first_name || ""} ${data.payer?.last_name || ""}`.trim() || "Não informado";
-    const email = data.payer?.email || "Não informado";
-    const celular = data.payer?.phone?.number || "Não informado";
+const cliente =
+ `${data.payer?.first_name || ""} ${data.payer?.last_name || ""}`.trim() ||
+ data.metadata?.cliente_nome ||
+ "Não informado";
+
+const email =
+ data.payer?.email ||
+ data.metadata?.cliente_email ||
+ "Não informado";
+
+const celular =
+ data.payer?.phone?.number ||
+ data.metadata?.cliente_celular ||
+ "Não informado";
 
     const response = await fetch(process.env.DISCORD_WEBHOOK_URL, {
       method: "POST",
