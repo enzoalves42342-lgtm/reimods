@@ -81,7 +81,11 @@ exports.handler = async (event) => {
     const sessionName = session.user.username;
 
     const body = JSON.parse(event.body || "{}");
-
+    
+    const nome = body.nome || body.name || "";
+    const email = body.email || "";
+    const celular = body.celular || body.phone || "";
+   
     if (!Array.isArray(body.items) || body.items.length === 0) {
       return {
         statusCode: 400,
@@ -126,6 +130,13 @@ exports.handler = async (event) => {
 
     const preference = {
     items: mpItems,
+      payer: {
+  name: nome,
+  email: email,
+  phone: {
+    number: celular
+  }
+},
   auto_return: "approved",
 
   back_urls: {
@@ -134,10 +145,13 @@ exports.handler = async (event) => {
     pending: "https://reimoddd.netlify.app/#checkout"
   },
 
-  metadata: {
-    discord_id: sessionUser,
-    discord_name: sessionName
-  },
+metadata: {
+  discord_id: sessionUser,
+  discord_name: sessionName,
+  cliente_nome: nome,
+  cliente_email: email,
+  cliente_celular: celular
+},
 
   notification_url: "https://reimoddd.netlify.app/.netlify/functions/mp_webhook"
 };
