@@ -131,7 +131,7 @@ const celular = body.celular || body.phone || "";
       });
     }
 
-    cconst preference = {
+    const preference = {
   items: mpItems,
 
   payer: {
