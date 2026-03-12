@@ -7,7 +7,6 @@ exports.handler = async () => {
     { id:"aimx_2", category:"AIMX", name:"AimX (7 dias)", price:47.00, tag:"ANDROID", desc:"Após a compra, abra um ticket.", img:"/assets/products/aimx.webp" },
     { id:"aimx_3", category:"AIMX", name:"AimX (15 dias)", price:55.00, tag:"ANDROID", desc:"Após a compra, abra um ticket.", img:"/assets/products/aimx.webp" },
     { id:"aimx_4", category:"AIMX", name:"AimX (30 dias)", price:75.00, tag:"ANDROID", desc:"Após a compra, abra um ticket.", img:"/assets/products/aimx.webp" },
-	{ id:"aimx_11", category:"AIMX", name:"AimX (10 dias)", price:0.10, tag:"ANDROID", desc:"Após a compra, abra um ticket.", img:"/assets/products/aimx.webp" },
 	
 	
     { id:"ninja_3", category:"NINJA", name:"Ninja (3 dias)", price:21.00, tag:"ANDROID", desc:"Predictions break or Frist shot , Auto play, Auto Queue, Smart Auto Queue, 100% safe.", img:"/assets/products/ninja.webp" },
