@@ -16,10 +16,6 @@ const PRODUCTS = [
   { id:"ninja_7", price:37.00, title:"Ninja (7 dias)" },
   { id:"ninja_30", price:74.00, title:"Ninja (30 dias)" },
 
-  { id:"aimx_5", price:57.90, title:"AimX (1 dia)" },
-  { id:"aimx_6", price:87.90, title:"AimX (7 dias)" },
-  { id:"aimx_7", price:127.90, title:"AimX (30 dias)" },
-
   { id:"wizzard_1", price:28.50, title:"Wizzard - SEM CERTIFICADO (1 dia)" },
   { id:"wizzard_7", price:80.00, title:"Wizzard - SEM CERTIFICADO (7 dias)" },
   { id:"wizzard_30", price:161.00, title:"Wizzard - SEM CERTIFICADO (30 dias)" },
