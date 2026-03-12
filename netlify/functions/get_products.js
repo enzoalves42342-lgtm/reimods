@@ -36,32 +36,32 @@ exports.handler = async () => {
     { id:"fichas_7", category:"Fichas", name:"5B", price:349.00, tag:"Fichas", desc:"Torne-se um multi-bilionário.", img:"/assets/products/fichas.webp" },
 
     // Conta Premium
-    { id:"conta_premium", category:"Contas Premium", name:"Conta + 100M", price:89.00, tag:"Premium", desc:"CONTA COM 7 A 8 LENDARIOS.", img:"/assets/products/conta.webp" },
-    { id:"conta_premium", category:"Contas Premium", name:"Conta + 500M", price:129.00, tag:"Premium", desc:"CONTA COM 7 A 8 LENDARIOS.", img:"/assets/products/conta.webp" },
-    { id:"conta_premium", category:"Contas Premium", name:"Conta + 1B", price:159.00, tag:"Premium", desc:"CONTA COM 7 A 8 LENDARIOS.", img:"/assets/products/conta.webp" },
-    { id:"conta_premium", category:"Contas Premium", name:"Conta + 2B", price:199.00, tag:"Premium", desc:"CONTA COM 7 A 8 LENDARIOS.", img:"/assets/products/conta.webp" },
-    { id:"conta_premium", category:"Contas Premium", name:"Conta + 3B", price:239.00, tag:"Premium", desc:"CONTA COM 7 A 8 LENDARIOS.", img:"/assets/products/conta.webp" },
+    { id:"conta_premium1", category:"Contas Premium", name:"Conta + 100M", price:89.00, tag:"Premium", desc:"CONTA COM 7 A 8 LENDARIOS.", img:"/assets/products/conta.webp" },
+    { id:"conta_premium2", category:"Contas Premium", name:"Conta + 500M", price:129.00, tag:"Premium", desc:"CONTA COM 7 A 8 LENDARIOS.", img:"/assets/products/conta.webp" },
+    { id:"conta_premium3", category:"Contas Premium", name:"Conta + 1B", price:159.00, tag:"Premium", desc:"CONTA COM 7 A 8 LENDARIOS.", img:"/assets/products/conta.webp" },
+    { id:"conta_premium4", category:"Contas Premium", name:"Conta + 2B", price:199.00, tag:"Premium", desc:"CONTA COM 7 A 8 LENDARIOS.", img:"/assets/products/conta.webp" },
+    { id:"conta_premium5", category:"Contas Premium", name:"Conta + 3B", price:239.00, tag:"Premium", desc:"CONTA COM 7 A 8 LENDARIOS.", img:"/assets/products/conta.webp" },
 
     // Conta Simples
-    { id:"conta_simples", category:"Contas Simples", name:"Conta + 100M", price:29.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
-    { id:"conta_simples", category:"Contas Simples", name:"Conta + 200M", price:39.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
-    { id:"conta_simples", category:"Contas Simples", name:"Conta + 500M", price:69.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
-    { id:"conta_simples", category:"Contas Simples", name:"Conta + 1B", price:119.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
-    { id:"conta_simples", category:"Contas Simples", name:"Conta + 3B", price:179.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
-    { id:"conta_simples", category:"Contas Simples", name:"Conta + 3B", price:219.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
+    { id:"conta_simples1", category:"Contas Simples", name:"Conta + 100M", price:29.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
+    { id:"conta_simples2", category:"Contas Simples", name:"Conta + 200M", price:39.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
+    { id:"conta_simples3", category:"Contas Simples", name:"Conta + 500M", price:69.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
+    { id:"conta_simples4", category:"Contas Simples", name:"Conta + 1B", price:119.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
+    { id:"conta_simples5", category:"Contas Simples", name:"Conta + 3B", price:179.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
+    { id:"conta_simples6", category:"Contas Simples", name:"Conta + 3B", price:219.00, tag:"Simples", desc:"CONTA LEVEL 40 A 70 E TACOS SIMPLES.", img:"/assets/products/conta.webp" },
 	
 	// Golden Shots
-     { id:"golden", category:"Golden Shots", name:"24 Golden", price:34.90, tag:"Simples", desc:"Os Golden Shots são ideais para quem quer maximizar recompensas, acelerar o progresso e garantir prêmios especiais com muito mais eficiência.", img:"/assets/products/golden.webp" },
-	 { id:"golden", category:"Golden Shots", name:"48 Golden", price:59.90, tag:"Simples", desc:"Os Golden Shots são ideais para quem quer maximizar recompensas, acelerar o progresso e garantir prêmios especiais com muito mais eficiência.", img:"/assets/products/golden.webp" },
-	 { id:"golden", category:"Golden Shots", name:"72 Golden", price:89.90, tag:"Simples", desc:"Os Golden Shots são ideais para quem quer maximizar recompensas, acelerar o progresso e garantir prêmios especiais com muito mais eficiência.", img:"/assets/products/golden.webp" },
-	 { id:"golden", category:"Golden Shots", name:"96 Golden", price:119.90, tag:"Simples", desc:"Os Golden Shots são ideais para quem quer maximizar recompensas, acelerar o progresso e garantir prêmios especiais com muito mais eficiência.", img:"/assets/products/golden.webp" },
+     { id:"golden1", category:"Golden Shots", name:"24 Golden", price:34.90, tag:"Simples", desc:"Os Golden Shots são ideais para quem quer maximizar recompensas, acelerar o progresso e garantir prêmios especiais com muito mais eficiência.", img:"/assets/products/golden.webp" },
+	 { id:"golden2", category:"Golden Shots", name:"48 Golden", price:59.90, tag:"Simples", desc:"Os Golden Shots são ideais para quem quer maximizar recompensas, acelerar o progresso e garantir prêmios especiais com muito mais eficiência.", img:"/assets/products/golden.webp" },
+	 { id:"golden3", category:"Golden Shots", name:"72 Golden", price:89.90, tag:"Simples", desc:"Os Golden Shots são ideais para quem quer maximizar recompensas, acelerar o progresso e garantir prêmios especiais com muito mais eficiência.", img:"/assets/products/golden.webp" },
+	 { id:"golden4", category:"Golden Shots", name:"96 Golden", price:119.90, tag:"Simples", desc:"Os Golden Shots são ideais para quem quer maximizar recompensas, acelerar o progresso e garantir prêmios especiais com muito mais eficiência.", img:"/assets/products/golden.webp" },
 	
 	// Pontos vips
-	{ id:"pontos", category:"Pontos Vips", name:"VIP PRATA : 11,180 PTS", price:36.00, tag:"Pontos", desc:"Os pontos são adicionados automaticamente de acordo com o seu VIP..", img:"/assets/products/pontos.webp" },
-	{ id:"pontos", category:"Pontos Vips", name:"VIP OURO : 16,770 PTS", price:36.00, tag:"Pontos", desc:"Os pontos são adicionados automaticamente de acordo com o seu VIP..", img:"/assets/products/pontos.webp" },
-	{ id:"pontos", category:"Pontos Vips", name:"VIP ESMERALDA : 22,360 PTS", price:36.00, tag:"Pontos", desc:"Os pontos são adicionados automaticamente de acordo com o seu VIP..", img:"/assets/products/pontos.webp" },
-	{ id:"pontos", category:"Pontos Vips", name:"VIP DIAMANTE : 27,950 PTS", price:36.00, tag:"Pontos", desc:"Os pontos são adicionados automaticamente de acordo com o seu VIP..", img:"/assets/products/pontos.webp" },
-	{ id:"pontos", category:"Pontos Vips", name:"VIP DIAMANTE NEGRO : 33,540 PTS", price:36.00, tag:"Pontos", desc:"Os pontos são adicionados automaticamente de acordo com o seu VIP..", img:"/assets/products/pontos.webp" },
+	{ id:"pontos1", category:"Pontos Vips", name:"VIP PRATA : 11,180 PTS", price:36.00, tag:"Pontos", desc:"Os pontos são adicionados automaticamente de acordo com o seu VIP..", img:"/assets/products/pontos.webp" },
+	{ id:"pontos2", category:"Pontos Vips", name:"VIP OURO : 16,770 PTS", price:36.00, tag:"Pontos", desc:"Os pontos são adicionados automaticamente de acordo com o seu VIP..", img:"/assets/products/pontos.webp" },
+	{ id:"pontos3", category:"Pontos Vips", name:"VIP ESMERALDA : 22,360 PTS", price:36.00, tag:"Pontos", desc:"Os pontos são adicionados automaticamente de acordo com o seu VIP..", img:"/assets/products/pontos.webp" },
+	{ id:"pontos4", category:"Pontos Vips", name:"VIP DIAMANTE : 27,950 PTS", price:36.00, tag:"Pontos", desc:"Os pontos são adicionados automaticamente de acordo com o seu VIP..", img:"/assets/products/pontos.webp" },
+	{ id:"pontos5", category:"Pontos Vips", name:"VIP DIAMANTE NEGRO : 33,540 PTS", price:36.00, tag:"Pontos", desc:"Os pontos são adicionados automaticamente de acordo com o seu VIP..", img:"/assets/products/pontos.webp" },
 
   ];
 
