@@ -49,12 +49,15 @@ const response = await fetch(process.env.DISCORD_WEBHOOK_URL, {
     embeds: [{
       title: "💰 Compra Aprovada",
       color: 3066993,
-      fields: [
-        { name: "👤 Usuário", value: `${discordName} (${discordId})` },
-        { name: "📦 Produto", value: `${product?.name || "Produto"}` },
-        { name: "📅 Data", value: `${new Date().toLocaleString("pt-BR")}` },
-		{ name: "💰 Valor", value: `R$ ${product?.price || payment.transaction_amount}` },
-      ]
+ fields: [
+  { name: "👤 Usuário", value: `${discordName} (${discordId})` },
+	 
+  { name: "📦 Produto", value: productNames },
+	 
+  { name: "📅 Data", value: date },
+	 
+  { name: "💰 Valor", value: `R$ ${total}` }
+]
     }]
   })
 });
