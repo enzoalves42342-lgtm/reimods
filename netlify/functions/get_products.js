@@ -14,10 +14,6 @@ exports.handler = async () => {
     { id:"ninja_30", category:"NINJA", name:"Ninja (30 dias)", price:74.00, tag:"ANDROID", desc:"Predictions break or Frist shot , Auto play, Auto Queue, Smart Auto Queue, 100% safe.", img:"/assets/products/ninja.webp" },
   
       // MODS iOS
-    { id:"aimx_5", category:"AIMX iOS", name:"AimX (1 dia)", price:57.90, tag:"iOS", desc:"Após a compra, abra um ticket.", img:"/assets/products/aimxx.webp" },
-    { id:"aimx_6", category:"AIMX iOS", name:"AimX (7 dias)", price:87.90, tag:"iOS", desc:"Após a compra, abra um ticket.", img:"/assets/products/aimxx.webp" },
-    { id:"aimx_7", category:"AIMX iOS", name:"AimX (30 dias)", price:127.90, tag:"iOS", desc:"Após a compra, abra um ticket.", img:"/assets/products/aimxx.webp" },
-
     { id:"wizzard_1", category:"WIZZARD iOS", name:"Wizzard - SEM CERTIFICADO(1 dia)", price:28.50, tag:"iOS", desc:"Após a compra, abra um ticket.", img:"/assets/products/wizzard.webp" },
     { id:"wizzard_7", category:"WIZZARD iOS", name:"Wizzard - SEM CERTIFICADO (7 dias)", price:80.00, tag:"iOS", desc:"Após a compra, abra um ticket.", img:"/assets/products/wizzard.webp" },
     { id:"wizzard_30", category:"WIZZARD iOS", name:"Wizzard - SEM CERTIFICADO(30 dias)", price:161.00, tag:"iOS", desc:"Após a compra, abra um ticket.", img:"/assets/products/wizzard.webp" },
