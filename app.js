@@ -3,7 +3,7 @@ const CONNECT_CMD = "";        // ex: "connect SEU_IP_AQUI:30120"
 
 const pages = ["home", "store", "rules", "team", "checkout"];
 
-const categories = ["AIMX", "NINJA", "AIMX iOS", "WIZZARD iOS", "GBD iOS", "Fichas", "Contas Premium", "Contas Simples", "Golden Shots", "Pontos Vips"];
+const categories = ["AIMX", "NINJA", "WIZZARD iOS", "GBD iOS", "Fichas", "Contas Premium", "Contas Simples", "Golden Shots", "Pontos Vips"];
 let activeCategory = "AIMX";
 
 let productsData = [];
